@@ -1,7 +1,7 @@
-const sliderContainer = document.querySelector('.slider-container')
+const sliderContainer = document.querySelector(".slider-container");
 
 const sliderTmpl = () => {
-    return `
+  return `
     <img class="image-in-slider" src="" alt="" />
 
       <div class="hero-text-container">
@@ -10,10 +10,9 @@ const sliderTmpl = () => {
           hvor elegance møder funktionalitet
         </p>
       </div>`;
-}
+};
 
-
-const renderSlider = () => {
+export const renderSlider = () => {
   if (sliderContainer) {
     sliderContainer.insertAdjacentHTML("beforeend", sliderTmpl);
   }
@@ -56,4 +55,4 @@ const renderSlider = () => {
 
   //kalder setInterval funktion og sætter den til at kalde next-funktionen hvert 3. sekund
   setInterval(next, 3000);
-}
+};

@@ -1,1 +1,8 @@
+/* import style sheets */
 @import url("functions.css");
+@import url("components/contact.css");
+@import url("components/gallery.css");
+@import url("components/nav.css");
+@import url("components/product_groups.css");
+@import url("components/recommended.css");
+@import url("components/slider.css");

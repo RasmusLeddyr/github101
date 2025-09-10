@@ -1,8 +1,8 @@
 // ekstra opgave: modtag besked
-const contactContainer = document.querySelector('.contact-container')
+const contactContainer = document.querySelector(".contact-container");
 
 const contactTmpl = () => {
-    return `<div class="customer-overlay">
+  return `<div class="customer-overlay">
         <div class="form-success-message">
           <h1 class="success-message">Sendt!</h1>
         </div>
@@ -32,7 +32,7 @@ const contactTmpl = () => {
           </form>
         </div>
       </div>`;
-}
+};
 
 const validateForm = (e) => {
   const form = document.getElementById("customer-form");
@@ -85,17 +85,9 @@ const validateForm = (e) => {
   }
 };
 
-const renderContact = () => {
-
-    if(contactContainer) {
-
-        contactContainer.insertAdjacentHTML('beforeend', contactTmpl)
-        form.addEventListener("submit", validateForm)
-
-    }
-    
-
-
-
-
-}
+export const renderContact = () => {
+  if (contactContainer) {
+    contactContainer.insertAdjacentHTML("beforeend", contactTmpl);
+    form.addEventListener("submit", validateForm);
+  }
+};

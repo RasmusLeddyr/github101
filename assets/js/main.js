@@ -1,7 +1,12 @@
-// import components
+// import and run component functions
 
-//
+import { Recommended } from "./components/recommended.js";
+Recommended();
 
-// run component functions
+import { renderSlider } from "./components/slider.js";
+renderSlider();
+
+import { renderContact } from "./components/contact.js";
+renderContact();
 
 //
