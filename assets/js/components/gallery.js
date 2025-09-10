@@ -8,7 +8,7 @@ const ELMT_gal_cont = document.querySelector(".gallery-container");
 //
 
 // return template for gallery section
-function ListTmpl() {
+function GalTmpl() {
   return `
 <section class="gallery-container">
     <ul class="gal_list">
@@ -29,14 +29,28 @@ function ItemTmpl(item) {
 }
 //
 
-//
+// insert gallery elements
 export const Gallery = () => {
   if (ELMT_gal_cont) {
-    ELMT_gal_cont.insertAdjacentHTML("beforeend", ListTmpl());
-    const ELMT_gal_ul = ELMT_gal_cont.querySelector(".gal_list");
+    // insert gallery template
+    ELMT_gal_cont.insertAdjacentHTML("beforeend", GalTmpl());
+    //
+
+    // define variables
+    const ELMT_ul = ELMT_gal_cont.querySelector(".gal_list");
+    const ELMT_dial = ELMT_gal_cont.querySelector(".gal_show");
+    //
+
+    // insert gallery item using template
     LIST_gal.forEach((item) => {
-      ELMT_gal_ul.insertAdjacentHTML("beforeend", ItemTmpl(item));
+      ELMT_ul.insertAdjacentHTML("beforeend", ItemTmpl(item));
     });
+    const ELMT_gal_items = ELMT_ul.querySelectorAll(".gal_list");
+    /* ELMT_gal_items.forEach(item) => {
+        ELMT_dial.innerHTML = item.innerHTML;
+  ELMT_dial.showModal();
+    } */
+    //
   }
 };
 //
