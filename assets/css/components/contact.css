@@ -1,0 +1,107 @@
+
+.customer-overlay {
+  background: lightgray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.customer-header {
+  color: black;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 60px;
+}
+
+#customer-form input {
+  font-family: "Raleway";
+  font-size: 14px;
+  background: transparent;
+  color: black;
+  width: 600px;
+  max-width: 95vw;
+  height: 45px;
+  border: 1px solid black;
+  padding: 10px 25px;
+  margin: 10px auto;
+}
+
+#customer-form input:focus {
+  border: 3px solid black;
+  outline: none;
+}
+#customer-form textarea:focus {
+  border: 3px solid black;
+  outline: none;
+}
+
+#customer-form textarea {
+  font-size: 14px;
+  margin: 10px auto;
+  font-family: "Raleway";
+  background: transparent;
+  color: black;
+  width: 600px;
+  max-width: 95vw;
+  height: 180px;
+  border: 1px solid black;
+  padding: 10px 25px;
+  margin-bottom: 30px;
+}
+
+#submit-btn {
+  font-family: "Raleway";
+  font-size: 14px;
+  width: 600px;
+  height: 35px;
+  border: none;
+  background: black;
+  color: white;
+  transition: 0.3s;
+  margin-bottom: 50px;
+}
+
+.customer-input {
+  position: relative;
+}
+
+#name-error,
+#email-error,
+#text-error {
+  color: rgb(255, 40, 40);
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.form-success-message.active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: darkgray;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+  gap: 150px;
+}
+
+.form-success-message {
+  display: none;
+}
+
+.form-success-message img {
+  width: 80px;
+  margin: 0 auto;
+}
+
+.success-message {
+  color: greenyellow;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
