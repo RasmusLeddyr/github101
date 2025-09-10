@@ -88,6 +88,6 @@ const validateForm = (e) => {
 export const renderContact = () => {
   if (contactContainer) {
     contactContainer.insertAdjacentHTML("beforeend", contactTmpl);
-    form.addEventListener("submit", validateForm);
+    form.addEventListener("submit", validateForm); // -Rasmus: Der er ikke noget der hedder "form" i dette scope. Det er defineret i "validateForm", hvilket sker efter denne del.
   }
 };

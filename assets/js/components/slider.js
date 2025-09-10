@@ -18,7 +18,7 @@ export const renderSlider = () => {
   }
 
   //henter html-elementet billedet skal i
-  const activeImage = document.querySelector(".image-in-slider");
+  const activeImage = document.querySelector(".image-in-slider"); //-Rasmus: Skal du ikke hente alle? Også, kan du ikke indsætte det igennem din template måske?
 
   //index-variabel som bruges til at hente det korrekte billede fra arrayen
   let currentImageIndex = 0;
