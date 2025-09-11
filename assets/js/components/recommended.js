@@ -2,13 +2,13 @@ import { GetData } from "../fetch.js";
 
 const recommended = await GetData("assets/data/recommended.json");
 console.log(recommended);
- 
-export const recommendedList = async () => {
+
+export const Recommended = async () => {
   const container = document.querySelector(".recommended-products");
   if (!container) return;
- 
+
   container.innerHTML = ""; // ryd containeren
- 
+
   recommended.forEach((item) => {
     container.insertAdjacentHTML(
       "beforeend",
@@ -27,4 +27,3 @@ export const recommendedList = async () => {
     );
   });
 };
- 
