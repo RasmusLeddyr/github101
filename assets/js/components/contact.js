@@ -1,4 +1,3 @@
-// ekstra opgave: modtag besked
 const contactContainer = document.querySelector(".contact-container");
 
 const contactTmpl = () => {
