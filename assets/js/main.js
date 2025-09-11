@@ -14,4 +14,6 @@ Gallery();
 import { Header } from "./components/header-container.js";
 Header();
 
+import { productList } from "./components/product-groups.js";
+productList();
 
