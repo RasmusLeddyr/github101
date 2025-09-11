@@ -21,17 +21,12 @@ try {
 // Find containeren i DOM
 
 const productGroups = document.querySelector(".product-groups-container");
- 
-// Overskrift
 
 if (productGroups) {
 
   productGroups.innerHTML = `<h2> Vores Tre Produktgrupper </h2>`;
 
 }
- 
-// Template til et produktkort (bevarer jeres struktur)
-
 const productListTmpl = (product) => {
 
   return `

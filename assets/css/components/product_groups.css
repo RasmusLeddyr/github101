@@ -1,5 +1,5 @@
 .product-groups {
-    background-color: rgb(225, 225, 225);
+    background-color: grey;
     padding: 80px 100px;
  
     @media(max-width: 425px) {
@@ -9,7 +9,6 @@
  
 .product-icon > img {
     height: 50px;
-    
 }
  
 .icon-text {
@@ -31,11 +30,3 @@ h3 {
     align-self: center;
 }
  
-
- 
-#products ul li {
-  display: grid;
-  grid-template-areas:
-    ". title"
-    "icon desc";
-}
