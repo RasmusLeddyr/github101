@@ -22,14 +22,14 @@ const sliderTmpl = (i) => {
       </div>`;
 };
 
-export const loadSlider = (index) => {
+const loadSlider = (index) => {
   if (sliderContainer) {
     sliderContainer.innerHTML = ''
     sliderContainer.insertAdjacentHTML("beforeend", sliderTmpl(index));
   }
 }
 
-const renderSlider = () => {
+export const renderSlider = () => {
 
   loadSlider(i)
 

@@ -16,7 +16,7 @@ const contactTmpl = () => {
             </div>
             <div class="customer-input">
               <div id="email-error"></div>
-              <input type="email" id="email" name="email" placeholder="EMAIL" />
+              <input type="text" id="email" name="email" placeholder="EMAIL" />
             </div>
             <div class="customer-input">
               <div id="text-error"></div>
@@ -34,8 +34,18 @@ const contactTmpl = () => {
       </div>`;
 };
 
-const validateForm = (e) => {
-  const form = document.getElementById("customer-form");
+
+
+export const renderContact = () => {
+  if (contactContainer) {
+    contactContainer.insertAdjacentHTML("beforeend", contactTmpl());
+    const form = document.getElementById("customer-form");
+    form.addEventListener("submit", validateForm); // -Rasmus: Der er ikke noget der hedder "form" i dette scope. Det er defineret i "validateForm", hvilket sker efter denne del.
+  }
+};
+
+function validateForm(e) {
+  
   const namee = document.getElementById("name");
   const email = document.getElementById("email");
   const text = document.getElementById("text");
@@ -82,12 +92,5 @@ const validateForm = (e) => {
       email.value = "";
       text.value = "";
     }, 2000);
-  }
-};
-
-export const renderContact = () => {
-  if (contactContainer) {
-    contactContainer.insertAdjacentHTML("beforeend", contactTmpl);
-    form.addEventListener("submit", validateForm); // -Rasmus: Der er ikke noget der hedder "form" i dette scope. Det er defineret i "validateForm", hvilket sker efter denne del.
   }
 };
