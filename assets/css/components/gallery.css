@@ -1,0 +1,8 @@
+.gallery-container .gal_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-container .gal_list img {
+  max-width: 100%;
+}
