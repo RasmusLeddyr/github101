@@ -1,6 +1,6 @@
 const sliderContainer = document.querySelector(".slider-container");
 
-let heroText = 'Vi stræber efter at skabe en unik shoppingoplevelse hvor elegance møder funktionalitet';
+let heroText = 'Vi stræber efter at skabe en unik shoppingoplevelse <br> hvor elegance møder funktionalitet';
 
 let images = [
   "../assets/display/slider/hero_img.jpg",
@@ -40,7 +40,7 @@ export const renderSlider = () => {
     } else {
       i++;
     }
-    
+    loadSlider(i)
   }, 3000);
 
 }
