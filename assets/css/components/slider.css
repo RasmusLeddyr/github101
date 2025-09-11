@@ -14,10 +14,11 @@ body {
   font-family: "Abril Fatface";
 }
 
-.slider-section {
+.slider-container {
   position: relative;
   width: 100%;
   height: 800px;
+  overflow: hidden;
 }
 
 .image-in-slider {
@@ -25,6 +26,32 @@ body {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  animation: zoomIn 6s ease forwards;
+}
+
+
+.fade-in {
+  animation: fadeIn 1s ease forwards, zoomIn;
+}
+
+/* Fade out */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to   { transform: scale(1.05); }
 }
 
 .hero-text-container {
