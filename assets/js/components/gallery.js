@@ -4,7 +4,7 @@ import { GetData } from "../fetch.js";
 
 // define variables
 const LIST_gal = await GetData("assets/data/gallery.json");
-const ELMT_gal_cont = document.querySelector(".gallery-container");
+const ELMT_gal = document.querySelector(".gallery-container");
 //
 
 // return template for gallery section
@@ -29,25 +29,36 @@ function ItemTmpl(item) {
 
 // insert gallery elements
 export const Gallery = () => {
-  if (ELMT_gal_cont) {
+  if (ELMT_gal) {
     // insert gallery template
-    ELMT_gal_cont.insertAdjacentHTML("beforeend", GalTmpl());
+    ELMT_gal.insertAdjacentHTML("beforeend", GalTmpl());
     //
 
     // define variables
-    const ELMT_ul = ELMT_gal_cont.querySelector(".gal_list");
-    const ELMT_dial = ELMT_gal_cont.querySelector(".gal_show");
+    const ul = ELMT_gal.querySelector(".gal_list");
+    const dial = ELMT_gal.querySelector(".gal_show");
     //
 
     // insert gallery item using template
     LIST_gal.forEach((item) => {
-      ELMT_ul.insertAdjacentHTML("beforeend", ItemTmpl(item));
+      ul.insertAdjacentHTML("beforeend", ItemTmpl(item));
     });
-    const ELMT_gal_items = ELMT_ul.querySelectorAll(".gal_list");
-    /* ELMT_gal_items.forEach(item) => {
-        ELMT_dial.innerHTML = item.innerHTML;
-  ELMT_dial.showModal();
-    } */
+    const ELMT_gal_items = ul.querySelectorAll(".gal_item");
+    //
+
+    // add click event for each image to open dialog
+    ELMT_gal_items.forEach((item) => {
+      item.addEventListener("click", () => {
+        dial.innerHTML = item.innerHTML;
+        dial.showModal();
+      });
+    });
+    //
+
+    // add click event for dialog to close itself
+    dial.addEventListener("click", () => {
+      dial.close();
+    });
     //
   }
 };
