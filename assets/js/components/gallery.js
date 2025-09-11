@@ -10,11 +10,9 @@ const ELMT_gal_cont = document.querySelector(".gallery-container");
 // return template for gallery section
 function GalTmpl() {
   return `
-<section class="gallery-container">
-    <ul class="gal_list">
-    </ul>
-    <dialog class="gal_show"></dialog>
-</section>
+  <ul class="gal_list">
+  </ul>
+  <dialog class="gal_show"></dialog>
 `;
 }
 //
