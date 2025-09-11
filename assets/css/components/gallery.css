@@ -3,6 +3,13 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.gallery-container .gal_item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
 .gallery-container .gal_list img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
