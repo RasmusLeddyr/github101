@@ -1,32 +1,26 @@
-/* ==========================
-   TOPBAR
-   ========================== */
 .topbar {
   height: 30px;
   background-color: black;
   display: flex;
-  align-items: center;         /* centrer ikon og tekst vertikalt */
-  justify-content: center;     /* centrer hele indholdet horisontalt */
+  align-items: center;         
+  justify-content: center;     
   gap: 10px;
   padding: 0 12px;
 }
  
 .topbar-icon img {
   height: 14px;
-  filter: invert(1);           /* gør sort ikon hvidt, hvis det er en SVG/PNG */
+  filter: invert(1);         
 }
  
 .topbar-p {
   color: white;
   font-size: 13px;
   font-weight: 500;
-  margin: 0;                   /* fjern default <p> margin */
+  margin: 0;                   
   text-align: center;
 }
- 
-/* ==========================
-   HEADER WRAP
-   ========================== */
+
 .Header {
   position: relative;
   overflow: hidden;

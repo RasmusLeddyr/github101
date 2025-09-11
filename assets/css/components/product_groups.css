@@ -1,32 +1,31 @@
 .product-groups {
-    background-color: grey;
-    padding: 80px 100px;
- 
-    @media(max-width: 425px) {
-        padding: 50px 20px;
-    }
+  background-color: grey;
+  padding: 80px 100px;
+
+  @media (max-width: 425px) {
+    padding: 50px 20px;
+  }
 }
- 
+
 .product-icon > img {
-    height: 50px;
+  height: 50px;
 }
- 
+
 .icon-text {
-    display: flex;
-    gap: 50px;
- 
-    @media(max-width: 425px) {
-        display: block;
-        place-items: center;
-    }
+  display: flex;
+  gap: 50px;
+
+  @media (max-width: 425px) {
+    display: block;
+    place-items: center;
+  }
 }
- 
+
 h2 {
-    text-align: center;
+  text-align: center;
 }
- 
+
 h3 {
-    padding: 80px 100px 30px 100px;
-    align-self: center;
+  padding: 80px 100px 30px 100px;
+  align-self: center;
 }
- 

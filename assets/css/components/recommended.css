@@ -1,64 +1,87 @@
-/* === Recommended Section === */
-.recommended {
-  background-color: #3a3a3a; /* mørk grå baggrund */
-  padding: 60px 20px;
+.recommended-container {
+  background: #4b4b4b;
+  padding: 60px 0;
+}
+
+.recommended-container h2 {
   text-align: center;
-}
-
-.recommended-heading {
-  font-family: "Bodoni Moda", serif; /* matcher din font */
-  font-weight: 600;
-  font-size: 28px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: #fff;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
+  font-family: "Georgia", serif;
 }
 
-/* Grid layout */
-.recommended-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  justify-items: center;
+.recommended-container {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Kort */
 .recommended-card {
-  background-color: #fff;
-  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  max-width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recommended-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+
+.recommended-card .card-img {
+  background: #f8f8f8;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.recommended-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
+.recommended-card .card-img img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: contain;
 }
 
-/* Tekst i kortet */
-.recommended-card .card-content {
-  padding: 15px;
-  text-align: left;
+/* Informationsdelen: brand, titel, pris */
+
+.recommended-card .card-info {
+  padding: 16px;
+  color: #333;
 }
 
-.recommended-card h3 {
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
-  margin: 0 0 5px;
-  line-height: 1.4;
+.recommended-card .card-info .brand {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 0 4px;
 }
 
-.recommended-card .price {
-  font-size: 16px;
+.recommended-card .card-info .title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.recommended-card .card-info .price {
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #000;
   margin: 0;
+}
+
+@media (max-width: 900px) {
+  .recommended-container {
+    justify-content: space-around;
+  }
+
+  .recommended-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .recommended-card {
+    width: 100%;
+  }
 }

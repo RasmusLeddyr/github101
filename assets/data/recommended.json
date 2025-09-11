@@ -3,24 +3,24 @@
     "brand": "Roccamore",
     "title": "Lili Gold Glitter",
     "price": 2200,
-    "img": "images/shoes.jpg"
+    "img": "sko_guld.jpeg"
   },
   {
     "brand": "Saddler",
     "title": "Garda Totetaske",
     "price": 1500,
-    "img": "images/bag-brown.jpg"
+    "img": "taske1.jpeg"
   },
   {
     "brand": "Saddler",
     "title": "Mia Skuldertaske",
     "price": 2200,
-    "img": "images/bag-black.jpg"
+    "img": "taske2.jpeg"
   },
   {
     "brand": "Saddler",
     "title": "Mercy Ruskindsbælte",
     "price": 500,
-    "img": "images/belt-green.jpg"
+    "img": "bælte.jpeg"
   }
 ]

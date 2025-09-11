@@ -10,4 +10,9 @@ renderContact();
 
 import { Gallery } from "./components/gallery.js";
 Gallery();
-//
+
+import {Header} from "./components/header-container.js";
+Header();
+
+import { product } from "./components/product-groups.js";
+product();

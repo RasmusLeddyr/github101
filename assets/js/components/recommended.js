@@ -1,10 +1,9 @@
 import { GetData } from "../fetch.js";
 
 const recommended = await GetData("assets/data/recommended.json");
-console.log(recommended);
 
 export const Recommended = async () => {
-  const container = document.querySelector(".recommended-products");
+  const container = document.querySelector(".recommended-container");
   if (!container) return;
 
   container.innerHTML = ""; // ryd containeren
@@ -15,7 +14,7 @@ export const Recommended = async () => {
       `
       <article class="recommended-card">
         <div class="card-img">
-          <img src="${item.img}" alt="${item.title}">
+          <img src="assets/display/products/${item.img}" alt="${item.title}">
         </div>
         <div class="card-info">
           <p class="brand">${item.brand}</p>

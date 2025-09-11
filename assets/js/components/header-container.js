@@ -1,15 +1,12 @@
-// js/components/header.js
- 
 function buildHeader() {
-  const header = document.querySelector('.header-container');
+  const header = document.querySelector(".header-container");
   if (!header) {
     console.error('Ingen <header class="header-container"> fundet i HTML');
     return;
   }
- 
-  // Topbar
-  const topbar = document.createElement('div');
-  topbar.className = 'topbar';
+
+  const topbar = document.createElement("div");
+  topbar.className = "topbar";
   topbar.innerHTML = `
     <div class="topbar-icon">
       <img src="assets/display/icons/truck-solid.svg" alt="Levering ikon">
@@ -17,10 +14,9 @@ function buildHeader() {
     <p class="topbar-p">Bestiller du nu, vil din ordre blive sendt i dag</p>
   `;
   header.appendChild(topbar);
- 
-  // Navigation
-  const nav = document.createElement('nav');
-  nav.className = 'header-nav';
+
+  const nav = document.createElement("nav");
+  nav.className = "header-nav";
   nav.innerHTML = `
     <div class="burger-btn" id="burger-btn">
       <div class="bar"></div>
@@ -35,24 +31,22 @@ function buildHeader() {
     </ul>
   `;
   header.appendChild(nav);
- 
-  // Burger funktionalitet
-  const burger = nav.querySelector('#burger-btn');
-  const navList = nav.querySelector('#nav-list');
-  burger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-    burger.querySelectorAll('.bar').forEach(bar => bar.classList.toggle('active'));
+
+  const burger = nav.querySelector("#burger-btn");
+  const navList = nav.querySelector("#nav-list");
+  burger.addEventListener("click", () => {
+    navList.classList.toggle("show");
+    burger
+      .querySelectorAll(".bar")
+      .forEach((bar) => bar.classList.toggle("active"));
   });
- 
-  console.log('[header] bygget');
 }
- 
+
 export function Header() {
-  //  Kør buildHeader uanset om DOM allerede er klar eller ej
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', buildHeader, { once: true });
+  
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", buildHeader, { once: true });
   } else {
     buildHeader();
   }
 }
- 
