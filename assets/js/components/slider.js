@@ -1,58 +1,46 @@
 const sliderContainer = document.querySelector(".slider-container");
 
-const sliderTmpl = () => {
+let heroText = 'Vi stræber efter at skabe en unik shoppingoplevelse hvor elegance møder funktionalitet';
+
+let images = [
+  "../assets/display/slider/hero_img.jpg",
+  "../assets/display/slider/hero_img2.jpg",
+  "../assets/display/slider/hero_img3.jpg",
+];
+
+let i = 0
+
+const sliderTmpl = (i) => {
+
   return `
-    <img class="image-in-slider" src="" alt="" />
+    <img class="image-in-slider" src="${images[i]}" alt="" />
 
       <div class="hero-text-container">
         <p class="hero-text fatface">
-          Vi stræber efter at skabe en unik shoppingoplevelse, <br />
-          hvor elegance møder funktionalitet
+          ${heroText}
         </p>
       </div>`;
 };
 
-export const renderSlider = () => {
+export const loadSlider = (index) => {
   if (sliderContainer) {
-    sliderContainer.insertAdjacentHTML("beforeend", sliderTmpl);
+    sliderContainer.innerHTML = ''
+    sliderContainer.insertAdjacentHTML("beforeend", sliderTmpl(index));
   }
+}
 
-  //henter html-elementet billedet skal i
-  const activeImage = document.querySelector(".image-in-slider"); //-Rasmus: Skal du ikke hente alle? Også, kan du ikke indsætte det igennem din template måske?
+const renderSlider = () => {
 
-  //index-variabel som bruges til at hente det korrekte billede fra arrayen
-  let currentImageIndex = 0;
+  loadSlider(i)
 
-  //array variabel som indeholder billedestier til billederne som skal i slideren
-  let images = [
-    "../assets/display/slider/hero_img.jpg",
-    "../assets/display/slider/hero_img2.jpg",
-    "../assets/display/slider/hero_img3.jpg",
-  ];
+  setInterval(() => {
 
-  //funktion der sætter billedet ind i html-elementet
-  function setActiveSlide() {
-    //sætter html-elementets src-tag til at være lig med det billede som currentIndex-tælleren er på
-    activeImage.src = images[currentImageIndex];
-  }
-
-  //kalder funktionen så billedet loades
-  setActiveSlide();
-
-  //definerer en funktion som skifter til næste billede i rækken
-  function next() {
-    //hvis index-tælleren ikke er nået det sidste billede, så hæver den med 1
-    if (currentImageIndex < images.length - 1) {
-      currentImageIndex += 1;
+    if (i == images.length - 1) {
+      i = 0;
     } else {
-      //hvis index-tælleren er nået sidste billede sætter den værdien til 0 (første billede i arrayen)
-      currentImageIndex = 0;
+      i++;
     }
+    
+  }, 3000);
 
-    //opdatere billede efter index-tæller har skiftet værdi
-    setActiveSlide();
-  }
-
-  //kalder setInterval funktion og sætter den til at kalde next-funktionen hvert 3. sekund
-  setInterval(next, 3000);
-};
+}
