@@ -10,3 +10,6 @@ export const Recommended = () => {
   console.log(reco_list);
   // skriv din function her, og lav de ændringer i koden du har brug for -Rasmus
 };
+
+
+//test comment
